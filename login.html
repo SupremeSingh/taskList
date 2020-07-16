@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="login.css">
+  </head>
+
+  <body>
+    <div id="login">
+      <h3 class="text-center text-white pt-5">Your Task List</h3>
+      <div class="container">
+        <div
+          id="login-row"
+          class="row justify-content-center align-items-center"
+        >
+          <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+              <form id="login-form" class="form" action="" method="post">
+                <h3 class="text-center text-info">Login</h3>
+                <div class="form-group">
+                  <label for="username" class="text-info">Username:</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="username"
+                    id="login_username"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password" class="text-info">Password:</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="password"
+                    id="login_password"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="submit"
+                    name="Login"
+                    id="login_button"
+                    class="btn btn-info btn-md"
+                    value="Login"
+                  />
+                  <input
+                  type="submit"
+                  name="Sign In"
+                  id="signin_button"
+                  class="btn btn-info btn-md"
+                  value="Sign In"
+                />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAMsezGHP5aOBEnYiAcJEDWHGzWXC90-XY",
+        authDomain: "task-list-2a70a.firebaseapp.com",
+        databaseURL: "https://task-list-2a70a.firebaseio.com",
+        projectId: "task-list-2a70a",
+        storageBucket: "task-list-2a70a.appspot.com",
+        messagingSenderId: "804445505835",
+        appId: "1:804445505835:web:dc0fb606d4cf98b5ea1d6e",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="login.js"></script>
+  </body>
+</html>

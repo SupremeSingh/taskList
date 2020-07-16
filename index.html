@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/f79d32b6ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="Images/toDoList.png" type="image/png" />
+    <title style="font-weight: 900;">Task List</title>
+  </head>
+  <body>
+
+    <!-- Application -->
+    <div class="container my-3" id="general_container" style="margin: auto;">
+      <div class="card bg-light mb-3" style="margin: auto; max-width: 48rem;">
+        <div class="card-header">
+          <!-- Input -->
+          <form class="form-inline">
+            <h4 id="User_Name">Enter Task</h4>
+
+            <label class="sr-only" for="task">Task</label>
+            <input
+              type="text"
+              class="form-control mb-2 mr-sm-2"
+              id="task"
+              placeholder="Eg. Make my bed"
+              style="margin-left: auto;"
+            />
+
+            <label class="sr-only" for="deadline">Deadline</label>
+            <div class="input-group mb-2 mr-sm-2">
+              <div class="input-group-prepend">
+                <div class="input-group-date"></div>
+              </div>
+              <input
+                type="date"
+                class="form-control"
+                id="deadline"
+                placeholder="Datetime"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2" id="add_button">
+              +
+            </button>
+          </form>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Task List</h5>
+
+          <!-- Table of Tasks -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col" style="text-align: center;">#</th>
+                <th scope="col" style="text-align: center;">Task</th>
+                <th scope="col" style="text-align: center;">Deadline</th>
+                <th scope="col" style="text-align: center;">Status</th>
+              </tr>
+            </thead>
+            <tbody id="table_body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAMsezGHP5aOBEnYiAcJEDWHGzWXC90-XY",
+        authDomain: "task-list-2a70a.firebaseapp.com",
+        databaseURL: "https://task-list-2a70a.firebaseio.com",
+        projectId: "task-list-2a70a",
+        storageBucket: "task-list-2a70a.appspot.com",
+        messagingSenderId: "804445505835",
+        appId: "1:804445505835:web:dc0fb606d4cf98b5ea1d6e",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </body>
+  <script src="app.js"></script>
+</html>
