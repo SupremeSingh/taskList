@@ -7,6 +7,9 @@ let password = document.getElementById("login_password");
 let login_button = document.getElementById("login_button");
 let reg_button = document.getElementById("signin_button");
 
+let user = document.getElementById("User_Name");
+
+
 // Event Listeners
 login_button.addEventListener('click', (e) => {
   e.preventDefault();
@@ -24,6 +27,8 @@ reg_button.addEventListener('click', (e) => {
 
 // Change Page after Login
 auth_obj.onAuthStateChanged((user) => {
+    window.name = user.email.split("@")[0];
+    user.innerText = window.name;
     if (user) {
         window.location.replace("index.html");
     } 

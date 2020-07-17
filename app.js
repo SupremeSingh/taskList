@@ -1,9 +1,9 @@
 // Get Username 
-let name = "Enter Task";
+// let name = "Enter Task";
 
-firebase.auth().onAuthStateChanged((user) => {
-  window.name = user.email.split("@")[0];
-})
+// firebase.auth().onAuthStateChanged((user) => {
+//   window.name = user.email.split("@")[0];
+// })
 
 let database = firebase.database();
 
@@ -114,6 +114,7 @@ let check_button = document.getElementsByClassName("btn btn-success");
 let delete_button = document.getElementsByClassName("btn btn-danger");
 
 // Add Listeners
+console.log(window.name);
 user.innerText = window.name;
 
 add_button.addEventListener("click", (e) => {
